@@ -2,7 +2,7 @@ README
 ----
 1. Создадим схему:
 ```
-alter session set "_ORACLE_SCRIPT"=true;  
+alter session set "_ORACLE_SCRIPT"=true;
 create user STUDENT_DB identified by STUDENT_DB;
 grant create session to STUDENT_DB;
 grant unlimited tablespace to STUDENT_DB;

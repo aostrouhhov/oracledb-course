@@ -3,6 +3,7 @@ README
 1. Создадим схему:
 ```
 alter session set "_ORACLE_SCRIPT"=true;
+drop user STUDENT_DB cascade;
 create user STUDENT_DB identified by STUDENT_DB;
 grant create session to STUDENT_DB;
 grant unlimited tablespace to STUDENT_DB;
@@ -48,12 +49,6 @@ alter table STUDENT_TEST
 
 alter table STUDENT_TEST
     add constraint FK_Test_ID foreign key (Test_ID) references TEST(Test_ID);
-
--- Drop if needed:
---DROP TABLE STUDENT_TEST;
---DROP TABLE FACULTY;
---DROP TABLE STUDENT;
---DROP TABLE TEST;
 ```
 
 3. Запуск sqlloader в терминале в директории "Task 6 (sqlloader)":
